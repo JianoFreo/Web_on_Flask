@@ -3,20 +3,30 @@
 Login
 {% endblock %}
 {% block content %}
-<h1>
-    This is the Login page
-</h1>
-<p>
-{{ text }}<!-- would show the word testing beacsue thats the value of text -->
-</p>
-<p>
-{{ id + 50 }}
-</p> 
-
-{% if boolean %} <!-- if boolean is true -->
-    yes it is True
-{% else  %}
-    No it is not true
-{% endif %}
+<form method="POST">
+    <h3 align="center">Log in</h3>
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter email"
+        />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            type="text"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+        />
+    </div>
+    <br/>
+    <button type="submit" class="btn btn-primary">Log in</button>
+</form>
 
 {% endblock %}
